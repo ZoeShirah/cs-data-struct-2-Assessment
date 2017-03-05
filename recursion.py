@@ -99,7 +99,6 @@ def num_nodes(tree):
 
     return total
 
-
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
 
