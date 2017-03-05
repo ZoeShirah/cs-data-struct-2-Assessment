@@ -30,8 +30,20 @@ def merge_lists(list1, list2):
     [1, 3, 4, 7, 9, 11]
     """
 
-    pass
+    combined = []
+    while len(list1) > 0 or len(list2) > 0:
+        if list1 == []:
+            combined.extend(list2)
+            list2 = []
+        elif list2 == []:
+            combined.extend(list1)
+            list1 = []
+        elif list1[0] < list2[0]:
+            combined.append(list1.pop(0))
+        else:
+            combined.append(list2.pop(0))
 
+    return combined
 
 ##########ADVANCED##########
 def merge_sort(lst):
