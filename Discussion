@@ -1,0 +1,61 @@
+Discussion Questions
+
+Recursion
+
+1. In your own words, what is recursion?
+    Recursion is when a function calls itself.
+2. Why is it necessary to have a base case?
+    without a base case a function may just continue calling itself in an infinite loop.
+
+Graphs
+
+1. What is a graph?
+    A graph is a data structure made of nodes that hold references to other nodes.
+2. How is a graph different from a tree?
+    Unlike a tree, a graph has no sense of hierarchy, can be undirected, and may contain loops.
+3. Give an example of something that would be good to model with a graph.
+    A model of people you are friends with, and friends of your friends
+
+Performance of Different Data Structures
+
+Fill in the missing spots in the chart with the correct runtimes. Do this by reasoning through how the data structures work, NOT by looking up the solution. Add-R means add to the right/end/top and Add-L means add to the left/beginning/bottom. There are X’s in the spots where that operation doesn’t make sense for that data structure (for instance, you can’t index a stack, or pop from the end of a queue). We’ve provided the first few answers for you.
+
+Fill in the runtimes for the following actions for the table below:
+
+Data Structure             Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)         O(1)    O(n)    O(1)             
+Linked List                 O(n)    O(n)    O(n)   O(1)    O(1)    O(n)
+Doubly-Linked List          O(n)    O(n)    O(1)   O(1)    O(1)    O(1)    
+Queue (as Array)             X        X     O(1)     X     O(n)     X
+Queue (as LL or DLL)         X        X     O(1)     X     O(1)     X
+Stack (as Array, LL, or DLL) X        X     O(1)     X      X      O(1)
+Deque (as DLL)               X        X     O(1)     O(1)   O(1)   O(1)      
+
+Index: Find an item in the structure when you know its position
+Search: Find an item in the structure when you know its data
+Add(R/L): Set a key in set/dictionary or add node to tree
+Pop(R/L): Remove a key or node
+
+Fill in Runtime and Memory:
+
+The answers for dictionary have been provided; you should fill in the rest:
+
+Data Structure          Get     Add    Delete  Iterate  Memory
+Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)    medium
+Set (Hash Map)          O(1)    O(1)    O(1)    O(n)    medium          
+Binary Search Tree      O(logn) O(logn) O(logn) O(n)    a little            
+Tree                    O(n)    O(1)    O(1)    O(n)    a little
+Get: Find an item in the structure
+Add: Set a key in set/dictionary or add node to tree
+Delete: Remove a key or node
+Iterate: Find next item in data structure
+Memory: Relative to data, how much memory is used? (Choices: a little, medium, or a lot)
+
+Sorting
+
+1. Describe in words how the Bubble Sort algorithm works.
+    The bubble sort algorihm goes through a list comparing every item to the item to the right, and swapping them if necessary so the larger item is on the right.  When the end of the list is reached it starts again at the beginning and continues until the list is sorted.  This way the larger items will "bubble" up to the right.
+2. Describe in words how the Merge Sort algorithm works.
+    Merge sort divides the list into lists of 1 item, which we know is sorted, and them merges the lists back together using an algorithm to merge sorted lists.  The merging function works by taking the two sorted lists item by item, comparing them, and adding them in sorted order to a new list.
+3. Describe in words how the Quick Sort algorithm works.
+    A "partition" is picked randomly from the list, often staring on the middle index, and the rest of the list is arranged so that higher values are on the right and lower values are on the left.  Recursively do this for smaller sub-lists within the two halves of the original list until the list is sorted.
